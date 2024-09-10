@@ -1,0 +1,17 @@
+{
+    "dataset": "CIFAR100",
+    "model": "ConvNet",
+    "method": "IDM",
+    "ipc": "1",
+    "dsa_strategy": "color_crop_cutout_flip_scale_rotate",
+    "syn_ce": true,
+    "ce_weight": 1,
+    "aug": true,
+    "data_file": "/home/node/BACON/Code/evaluation/data_pool/IDM/IDM_cifar100_ipc1_conv.pt",
+    "save_path": "/home/node/BACON/Code/evaluation/model_pool/IDM/AT/",
+    "train_attack": "PGD",
+    "target_attack": false,
+    "test_attack": "None",
+    "src_dataset": false
+  }
+  
