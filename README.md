@@ -1,5 +1,5 @@
 <p align="center">
-<img src="fig/logo.png" width="100%" class="center" alt="pipeline"/>
+<img src="Fig/logo.png" width="100%" class="center" alt="pipeline"/>
 </p>
 
 Welcome to the official PyTorch implementation of [BEARD](https://arxiv.org/). BEARD is an open-source benchmark specifically designed to evaluate and improve the **adversarial robustness** of Dataset Distillation (DD) methods.
@@ -17,7 +17,7 @@ Discover the **official leaderboard** here: **[BEARD Leaderboard](https://beard-
 ## 🎯 Overview of BEARD
 
 <p align="center">
-<img src="fig/overview.png" width="100%" class="center" alt="pipeline"/>
+<img src="Fig/overview.png" width="100%" class="center" alt="pipeline"/>
 </p>
 
 BEARD addresses a critical gap in **Dataset Distillation (DD)** research by providing a systematic framework for evaluating adversarial robustness. While significant progress has been made in DD, deep learning models trained on distilled datasets remain vulnerable to adversarial attacks, posing risks in real-world applications.
@@ -47,14 +47,18 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
     conda activate beard
     ```
 ## 📁 Directory Structure
-- BACON
-    - Code
-        - data
-          - datasets
-        - dataset_pool
-        - model_pool
+- `BACON`
+    - `Code`
+        - `data`
+          - `datasets`
+        - `dataset_pool`
+        - `model_pool`
+        - `evaluate_model.py`
+        - `train_model.py`
+        - `evaluate_config.json`
+        - `train_config.json`
         - Files for BEARD
-        - enviroment.yml
+        - `enviroment.yml`
         - ...
         - ...
         - ...
@@ -92,4 +96,3 @@ We would like to thank the contributors of the following projects that inspired 
 - [MTT](https://github.com/GeorgeCazenavette/mtt-distillation)
 - [IDM](https://github.com/uitrbn/IDM)
 - [BACON](https://github.com/zhouzhengqd/BACON)
-
