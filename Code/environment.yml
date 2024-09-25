@@ -2,6 +2,9 @@ name: beard
 channels:
   - pytorch
   - conda-forge
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -30,7 +33,6 @@ dependencies:
   - gmp=6.2.1=h2531618_2
   - gnutls=3.6.15=he1e5248_0
   - gpustat=0.6.0=pyhd8ed1ab_1
-  - idna=3.3=pyhd3eb1b0_0
   - intel-openmp=2021.4.0=h06a4308_3561
   - jpeg=9d=h7f8727e_0
   - kornia=0.6.3=pyhd8ed1ab_0
@@ -83,7 +85,6 @@ dependencies:
   - pytorch-mutex=1.0=cuda
   - pyyaml=5.4.1=py39h3811e60_0
   - readline=8.1.2=h7f8727e_1
-  - requests=2.27.1=pyhd3eb1b0_0
   - scipy=1.7.3=py39hc147768_0
   - sentry-sdk=1.5.7=pyhd8ed1ab_0
   - setproctitle=1.2.2=py39h3811e60_0
@@ -108,21 +109,26 @@ dependencies:
   - zlib=1.2.11=h7f8727e_4
   - zstd=1.4.9=haebb681_0
   - pip:
-      - contourpy==1.2.1
-      - cycler==0.12.1
-      - fonttools==4.51.0
-      - importlib-resources==6.4.0
-      - joblib==1.4.0
-      - jsonpatch==1.33
-      - jsonpointer==2.4
-      - kiwisolver==1.4.5
-      - matplotlib==3.8.4
-      - networkx==3.2.1
-      - scikit-learn==1.4.2
-      - sklearn==0.0
-      - threadpoolctl==3.4.0
-      - torchnet==0.0.4
-      - tornado==6.4
-      - visdom==0.2.4
-      - websocket-client==1.7.0
-      - zipp==3.18.1
+    - chardet==4.0.0
+    - contourpy==1.2.1
+    - cycler==0.12.1
+    - fonttools==4.51.0
+    - idna==2.10
+    - importlib-resources==6.4.0
+    - joblib==1.4.0
+    - jsonpatch==1.33
+    - jsonpointer==2.4
+    - kiwisolver==1.4.5
+    - matplotlib==3.8.4
+    - networkx==3.2.1
+    - requests==2.25.1
+    - scikit-learn==1.4.2
+    - sklearn==0.0
+    - threadpoolctl==3.4.0
+    - torchattacks==3.5.1
+    - torchnet==0.0.4
+    - tornado==6.4
+    - visdom==0.2.4
+    - websocket-client==1.7.0
+    - zipp==3.18.1
+prefix: /opt/anaconda3/envs/beard

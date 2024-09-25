@@ -77,7 +77,7 @@ def main_train():
     parser.add_argument('--lr_net', type=float, default=0.01, help='learning rate for updating network parameters')
     parser.add_argument('--batch_train', type=int, default=256, help='batch size for training networks')
     parser.add_argument('--dsa_strategy', type=str, default='color_crop_cutout_flip_scale_rotate', help='differentiable Siamese augmentation strategy')
-    parser.add_argument('--data_path', type=str, default='/home/node/BACON/Code/data/', help='dataset path')
+    parser.add_argument('--data_path', type=str, default='./data/', help='dataset path')
     parser.add_argument('--save_path', type=str, default='/home/node/BACON/Code/result/', help='path to save results')
     parser.add_argument('--eval_interval', type=int, default=100, help='outer loop for network update')
     parser_bool(parser, 'syn_ce', True)
@@ -146,26 +146,13 @@ def main_train():
                     attack_time = end_time - start_time
                     infos[attack][str(target_attack).lower()]['acc'].append(acc_test)
                     infos[attack][str(target_attack).lower()]['time'].append(attack_time)
-                    # print('Evaluate %d random %s, attack_type: %s, target_attack: %s, mean = %.4f std = %.4f\n-------------------------' % (len(accs), model_eval, attack, args.target_attack, np.mean(accs), np.std(accs)))
+
                 else:
                     for i in range(args.num_eval):
                         print("current iteration: ", i)
                         _, acc_test = evaluate_synset(it, net_eval, testloader, args, aug=args.aug, target_attack = target_attack, test_attack=attack)
                         infos[attack][str(target_attack).lower()].append(acc_test)
-                    # mean, std = compute_std_mean(accs)
-                    # print("%s: final acc is: %.2f +- %.2f, dataset: %s, IPC: %s, DSA:%r, num_eval: %d, aug:%s , model: %s, attack_type: %s, target_attack: %s, src_dataset: %s"%( 
-                    #     args.method.upper(),
-                    #     mean * 100, std * 100,
-                    #     args.dataset, 
-                    #     args.ipc,
-                    #     args.dsa,
-                    #     args.num_eval,
-                    #     args.aug,
-                    #     args.model,
-                    #     args.test_attack,
-                    #     args.target_attack,
-                    #     args.src_dataset
-                    # ))
+
         for attack in args.test_attack:
             acc_target = infos[attack]['true']['acc']
             acc_non_target = infos[attack]['false']['acc']

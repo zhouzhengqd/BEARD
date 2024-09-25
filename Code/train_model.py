@@ -38,7 +38,7 @@ def main():
     parser.add_argument('--lr_net', type=float, default=0.01, help='learning rate for updating network parameters')
     parser.add_argument('--batch_train', type=int, default=256, help='batch size for training networks')
     parser.add_argument('--dsa_strategy', type=str, default='color_crop_cutout_flip_scale_rotate', help='differentiable Siamese augmentation strategy')
-    parser.add_argument('--data_path', type=str, default='/home/node/BACON/Code/data/', help='dataset path')
+    parser.add_argument('--data_path', type=str, default='./data/', help='dataset path')
     parser.add_argument('--save_path', type=str, default='/home/node/BACON/Code/evaluation/', help='path to save results')
     parser.add_argument('--eval_interval', type=int, default=100, help='outer loop for network update')
     parser_bool(parser, 'syn_ce', False)

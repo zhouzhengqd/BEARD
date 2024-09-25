@@ -36,7 +36,7 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
   git clone https://github.com/zhouzhengqd/BEARD.git
   ```
 ### Step 2: Download Dataset and Model Pools
-- Download the [Dataset Pool](https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a) and [Model Pool](https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187) and put them in the relevant positions.
+- Download the [Data](https://share.multcloud.link/share/bbe57236-3ca2-42b2-aa10-88394c2c4b04), [Dataset Pool](https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a) and [Model Pool](https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187) and put them in the relevant positions.
 
 ### Step 3: Set Up the Conda Environment
 - Run the following command to create a conda environment
@@ -72,6 +72,7 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
   ```
     python evaluate_model.py --config ./evaluate_config.json
   ```
+- **Note:** If you are using a model trained with distributed training, ensure that you also use the distributed evaluation model for consistency.
 ## ➕ Adding New Datasets and Models
 ### Step 1: Add Datasets
 - Place the newly generated distilled datasets in the `dataset_pool` directory.
