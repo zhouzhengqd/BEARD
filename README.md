@@ -97,3 +97,4 @@ We would like to thank the contributors of the following projects that inspired 
 - [MTT](https://github.com/GeorgeCazenavette/mtt-distillation)
 - [IDM](https://github.com/uitrbn/IDM)
 - [BACON](https://github.com/zhouzhengqd/BACON)
+- [torchattacks](https://github.com/Harry24k/adversarial-attacks-pytorch)
