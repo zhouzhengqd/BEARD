@@ -4,11 +4,11 @@
 
 <div align="center">
 
-[Zheng Zhou](https://zhouzhengqd.github.io/)<sup>1</sup>, [Wenquan Feng](https://shi.buaa.edu.cn/fengwenquan/zh_CN/index/132879/list/)<sup>1</sup>, [Shuchang Lyu](https://scholar.google.com/citations?user=SwGcxzMAAAAJ&hl=en)<sup>1</sup>, [Guangliang Cheng](https://sites.google.com/view/guangliangcheng)<sup>2</sup>, [Xiaowei Huang](https://cgi.csc.liv.ac.uk/~xiaowei/)<sup>2</sup>, [Qi Zhao](https://shi.buaa.edu.cn/07297/zh_CN/index.htm)<sup>1</sup>
+[Zheng Zhou](https://zhouzhengqd.github.io/)<sup>1</sup> &nbsp; [Wenquan Feng](https://shi.buaa.edu.cn/fengwenquan/zh_CN/index/132879/list/)<sup>1</sup> &nbsp; [Shuchang Lyu](https://scholar.google.com/citations?user=SwGcxzMAAAAJ&hl=en)<sup>1</sup> &nbsp; [Guangliang Cheng](https://sites.google.com/view/guangliangcheng)<sup>2</sup> &nbsp; [Xiaowei Huang](https://cgi.csc.liv.ac.uk/~xiaowei/)<sup>2</sup> &nbsp; [Qi Zhao](https://shi.buaa.edu.cn/07297/zh_CN/index.htm)<sup>1</sup>
 
-<sup>1</sup>School of Electronic and Information Engineering, Beihang Univerisity <br><sup>2</sup>Department of Computer Science, University of Liverpool
+<sup>1</sup> Beihang Univerisity &nbsp; <sup>2</sup> University of Liverpool
 
-**IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)**, 2025
+**IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025**
 
 </div>
 
