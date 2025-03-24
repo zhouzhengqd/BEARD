@@ -10,7 +10,7 @@
     "load_file": "./model_pool/BACON/BACON_ConvNet_CIFAR10_50_None.pth",
     "save_path": "./model_pool/BACON/",
     "train_attack": "None",
-    "test_attack": ["Clean","FGSM","PGD","PGD_L2","Deepfool","CW","AA"],
+    "test_attack": ["Clean","FGSM","PGD","PGD_L2","Deepfool","CW","AA","Square","SPSA"],
     "target_attack": [true,false],
     "src_dataset": true,
     "pgd_eva": false

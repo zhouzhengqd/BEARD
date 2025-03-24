@@ -8,7 +8,8 @@
 
 <sup>1</sup> Beihang Univerisity &nbsp; <sup>2</sup> University of Liverpool
 
-**IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025**
+**<span style="color: blue;">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025</span>**
+
 
 </div>
 
@@ -36,8 +37,10 @@ BEARD is an open-source benchmark specifically designed to evaluate and improve 
 
 ## 🚀 What's New?  
 
-- **September 2024**: The full BEARD codebase is now open-source! 🎉 Access it here: [BEARD GitHub Repository](https://github.com/zhouzhengqd/BEARD).  
-- **August 2024**: The first full release of the BEARD benchmark project.  
+- **<span style="color: blue;">Mar. 2025</span>**: We have updated our attack library with **transfer-based** and **query-based black-box attacks** along with their evaluation files.  
+- **<span style="color: blue;">Feb. 2025</span>**: Our **BEARD Benchmark Paper** is Accepted at **<span style="color: red;">CVPR 2025</span>**!
+- **<span style="color: blue;">Sep. 2024</span>**: The full BEARD codebase is now open-source! 🎉 Access it here: [BEARD GitHub Repository](https://github.com/zhouzhengqd/BEARD).  
+- **<span style="color: blue;">Aug. 2024</span>**: The first full release of the BEARD benchmark project.  
 
 ## 🎯 Overview of BEARD
 
@@ -80,8 +83,10 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
         - `model_pool`
         - `evaluate_model.py`
         - `train_model.py`
+        - `evaluate_model_blackbox.py`
         - `evaluate_config.json`
         - `train_config.json`
+        - `evaluate_config_blackbox.json`
         - Files for BEARD
         - `enviroment.yml`
         - ...
@@ -97,7 +102,11 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
   ```
     python evaluate_model.py --config ./evaluate_config.json
   ```
-- **Note:** If you are using a model trained with distributed training, ensure that you also use the distributed evaluation model for consistency.
+- To evaluate **transfer-based black-box attacks**, use:
+  ```
+    python evaluate_config_blackbox.py --config ./evaluate_config_blackbox.json
+  ```
+- **Note:** If your model was trained using **distributed training**, ensure that you also use the corresponding **distributed evaluation** setup for consistency. For instance, **IDM** in the model pool is trained with distributed training, so we provide a **single-GPU version** in the model pool for evaluation.
 ## ➕ Adding New Datasets and Models
 ### Step 1: Add Datasets
 - Place the newly generated distilled datasets in the `dataset_pool` directory.

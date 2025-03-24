@@ -438,6 +438,213 @@ def epoch(mode, dataloader, net, optimizer, criterion, args, aug, step=-1, bsr=F
             else:
                 atk = torchattacks.PGD(net, eps=10/255, alpha=2/225, steps=10, random_start=False)
                 img = atk(img, lab)
+        elif attack == 'PGD_e510':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=0.15, alpha=2/225, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=0.15, alpha=2/225, steps=10, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_s2':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=2, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=2, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_s4':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=4, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=4, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_s6':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=6, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=6, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_s8':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=8, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=8, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_s10':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=10, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'FGSM':
+            if target_attack == True:
+                atk = torchattacks.FGSM(net, eps=8/255)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.FGSM(net, eps=8/255)
+                img = atk(img, lab)
+        elif attack =='Deepfool':
+            if target_attack == True:
+                print("Deepfool can not support target attack!")
+            else:
+                atk = torchattacks.DeepFool(net, steps=50, overshoot=0.02)
+                img = atk(img, lab)
+        elif attack =='CW':
+            if target_attack == True:
+                atk = torchattacks.CW(net, c=1, kappa=0, steps=100, lr=0.01)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.CW(net, c=1, kappa=0, steps=100, lr=0.01)
+                img = atk(img, lab)
+        elif attack =='PGD_L2':
+            if target_attack == True:
+                atk = torchattacks.PGDL2(net, eps=128/255, alpha=15/255, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGDL2(net, eps=128/255, alpha=15/255, steps=10, random_start=False)
+                img = atk(img, lab)
+        elif attack =='AA':
+            if target_attack == True:
+                print("Autoattack can not support target attack!")
+            else:
+                atk = atk = torchattacks.AutoAttack(net, eps=8/255)
+                img = atk(img, lab)
+        elif attack =='Square':
+            if target_attack == True:
+                atk = torchattacks.Square(net, norm='Linf', eps=8/255, n_queries=5000, n_restarts=1, p_init=.8, seed=0, verbose=False, loss='margin', resc_schedule=True)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.Square(net, norm='Linf', eps=8/255, n_queries=5000, n_restarts=1, p_init=.8, seed=0, verbose=False, loss='margin', resc_schedule=True)
+                img = atk(img, lab)
+        elif attack =='Spsa':
+            if target_attack == True:
+                atk = torchattacks.SPSA(net, eps=8/255)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = atk = torchattacks.AutoAttack(net, eps=8/255)
+                img = atk(img, lab)
+        else:
+            pass
+
+        if not bsr:
+            output = net(img)
+        else:
+            output = net.forward_bsr(img)[1]
+        loss = criterion(output, lab)
+        if partial is None:
+            acc = np.sum(np.equal(np.argmax(output.cpu().data.numpy(), axis=-1), lab.cpu().data.numpy()))
+        else:
+            pred = np.argmax(output.cpu().data.numpy(), axis=-1)
+            gt = lab.cpu().data.numpy()
+            assert len(partial) == (max(partial) - min(partial) + 1) 
+            count_mask = ((gt >= min(partial)) & (gt <= max(partial)))
+            acc = np.sum((pred == gt) * count_mask)
+
+        loss_avg += loss.item()*n_b
+        acc_avg += acc
+        if partial is None:
+            num_exp += n_b
+        else:
+            num_exp += (count_mask.sum())
+
+        if mode == 'train':
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+
+    loss_avg /= num_exp
+    acc_avg /= num_exp
+    if partial is not None:
+        print("Size of Evaluation set: {}".format(num_exp))
+
+    return loss_avg, acc_avg
+
+def epoch_blackbox(mode, dataloader, net, eval_nets, optimizer, criterion, args, aug, step=-1, bsr=False, pooling=False, partial=None, attack=None, target_attack=True):
+    loss_avg, acc_avg, num_exp = 0, 0, 0
+    net = net.to(args.device)
+    eval_accuracies = {name: 0 for name in eval_nets.keys()}
+    criterion = criterion.to(args.device)
+
+    if mode == 'train':
+        net.train()
+    else:
+        net.eval()
+
+    for i_batch, datum in enumerate(dataloader):
+        if step != -1 and i_batch >= step:
+            break
+        img = datum[0].float().to(args.device)
+        if aug:
+            if args.dsa:
+                img = DiffAugment(img, args.dsa_strategy, param=args.dsa_param)
+            else:
+                img = augment(img, args.dc_aug_param, device=args.device)
+        lab = datum[1].long().to(args.device)
+        n_b = lab.shape[0]
+
+        if attack == 'PGD':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=10, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_e2':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=2/255, alpha=2/225, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=2/255, alpha=2/225, steps=10, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_e4':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=4/255, alpha=2/225, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=4/255, alpha=2/225, steps=10, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_e6':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=6/255, alpha=2/225, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=6/255, alpha=2/225, steps=10, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_e8':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=10, random_start=False)
+                img = atk(img, lab)
+        elif attack == 'PGD_e10':
+            if target_attack == True:
+                atk = torchattacks.PGD(net, eps=10/255, alpha=2/225, steps=10, random_start=False)
+                atk.set_mode_targeted_by_label(quiet=True)
+                img = atk(img, (lab+1)%10)
+            else:
+                atk = torchattacks.PGD(net, eps=10/255, alpha=2/225, steps=10, random_start=False)
+                img = atk(img, lab)
         elif attack == 'PGD_s2':
             if target_attack == True:
                 atk = torchattacks.PGD(net, eps=8/255, alpha=2/225, steps=2, random_start=False)
@@ -530,6 +737,15 @@ def epoch(mode, dataloader, net, optimizer, criterion, args, aug, step=-1, bsr=F
             assert len(partial) == (max(partial) - min(partial) + 1) 
             count_mask = ((gt >= min(partial)) & (gt <= max(partial)))
             acc = np.sum((pred == gt) * count_mask)
+        for name, model in eval_nets.items():
+            model.eval()
+            with torch.no_grad():
+                eval_output = model(img)
+                eval_acc = np.sum(np.equal(np.argmax(eval_output.cpu().data.numpy(), axis=-1), lab.cpu().data.numpy()))
+                eval_accuracies[name] += eval_acc
+
+                # 归一化准确率
+            # eval_accuracies = {name: acc / num_exp for name, acc in eval_accuracies.items()}
 
         loss_avg += loss.item()*n_b
         acc_avg += acc
@@ -545,10 +761,11 @@ def epoch(mode, dataloader, net, optimizer, criterion, args, aug, step=-1, bsr=F
 
     loss_avg /= num_exp
     acc_avg /= num_exp
+    eval_accuracies = {name: acc / num_exp for name, acc in eval_accuracies.items()}
     if partial is not None:
         print("Size of Evaluation set: {}".format(num_exp))
 
-    return loss_avg, acc_avg
+    return loss_avg, acc_avg, eval_accuracies
 
 def epoch_upsample(mode, dataloader, net, optimizer, criterion, args, aug, step=-1,PGD=False):
     loss_avg, acc_avg, num_exp = 0, 0, 0
