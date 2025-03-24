@@ -64,7 +64,8 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
   git clone https://github.com/zhouzhengqd/BEARD.git
   ```
 ### Step 2: Download Dataset and Model Pools
-- Download the [Data](https://share.multcloud.link/share/bbe57236-3ca2-42b2-aa10-88394c2c4b04), [Dataset Pool](https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a) and [Model Pool](https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187) and put them in the relevant positions.
+- Download the required files and place them in the appropriate directories: [Data](https://share.multcloud.link/share/bbe57236-3ca2-42b2-aa10-88394c2c4b04) | [Dataset Pool](https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a) | [Model Pool](https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187).
+- ❗**Alternative Access**: If you are unable to access the **MultCloud** drive, you can find the files on **Google Drive**: [Data](https://drive.google.com/drive/folders/1ntfXLEFHRPFPC3JG_hFOkcrEh5BKSzsp?usp=drive_link) | [Dataset Pool](https://drive.google.com/drive/folders/1gtgmGEM7zZXG0al-iJQsxxhTiOD5SqLG?usp=drive_link) | [Model Pool](https://drive.google.com/drive/folders/1tFK0GTWNrFp0Vu-L_lN1WXGndiPnldZq?usp=drive_link).
 
 ### Step 3: Set Up the Conda Environment
 - Run the following command to create a conda environment
