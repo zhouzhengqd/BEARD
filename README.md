@@ -8,8 +8,6 @@
 
 <sup>1</sup> Beihang Univerisity &nbsp; <sup>2</sup> University of Liverpool
 
-**IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025**
-
 
 </div>
 
@@ -38,7 +36,6 @@ BEARD is an open-source benchmark specifically designed to evaluate and improve 
 ## 🚀 What's New?  
 
 - **Mar. 2025**: We have updated our attack library with **transfer-based** and **query-based black-box attacks** along with their evaluation files.  
-- **Feb. 2025**: Our **BEARD Benchmark Paper** is Accepted at **CVPR 2025**!
 - **Sep. 2024**: The full BEARD codebase is now open-source! 🎉 Access it here: [BEARD GitHub Repository](https://github.com/zhouzhengqd/BEARD).  
 - **Aug. 2024**: The first full release of the BEARD benchmark project.  
 
