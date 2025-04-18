@@ -21,7 +21,7 @@
 </span> -->
 
 <span class="links">
-  <a href="https://beard-leaderboard.github.io/" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Website-gray?logo=rocket&label=Project%20Page&labelColor=darkorange&logoColor=white" style="max-width: 100%;"></a>
+  <a href="https://beard-leaderboard.github.io/" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Website-gray?logo=google%20chrome&label=Project%20Page&labelColor=darkorange&logoColor=white" style="max-width: 100%;"></a>
   <a href="https://github.com/"><img alt="Github" src="https://img.shields.io/badge/Code-gray?logo=Github&label=GitHub&labelColor=black" style="max-width: 100%;"></a>
   <a href="https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Material-gray?logo=icloud&label=Dataset%20Pool&labelColor=orange"></a>
   <a href="https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Materials-gray?logo=icloud&label=Model%20Pool&labelColor=red"></a>
