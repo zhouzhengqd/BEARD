@@ -4,23 +4,31 @@
 
 <div align="center">
 
-[Zheng Zhou](https://zhouzhengqd.github.io/)<sup>1</sup> &nbsp; [Wenquan Feng](https://shi.buaa.edu.cn/fengwenquan/zh_CN/index/132879/list/)<sup>1</sup> &nbsp; [Shuchang Lyu](https://scholar.google.com/citations?user=SwGcxzMAAAAJ&hl=en)<sup>1</sup> &nbsp; [Guangliang Cheng](https://sites.google.com/view/guangliangcheng)<sup>2</sup> &nbsp; [Xiaowei Huang](https://cgi.csc.liv.ac.uk/~xiaowei/)<sup>2</sup> &nbsp; [Qi Zhao](https://shi.buaa.edu.cn/07297/zh_CN/index.htm)<sup>1</sup>
+<!-- [Zheng Zhou](https://zhouzhengqd.github.io/)<sup>1</sup> &nbsp; [Wenquan Feng](https://shi.buaa.edu.cn/fengwenquan/zh_CN/index/132879/list/)<sup>1</sup> &nbsp; [Shuchang Lyu](https://scholar.google.com/citations?user=SwGcxzMAAAAJ&hl=en)<sup>1</sup> &nbsp; [Guangliang Cheng](https://sites.google.com/view/guangliangcheng)<sup>2</sup> &nbsp; [Xiaowei Huang](https://cgi.csc.liv.ac.uk/~xiaowei/)<sup>2</sup> &nbsp; [Qi Zhao](https://shi.buaa.edu.cn/07297/zh_CN/index.htm)<sup>1</sup>
 
-<sup>1</sup> Beihang Univerisity &nbsp; <sup>2</sup> University of Liverpool
+<sup>1</sup> Beihang Univerisity &nbsp; <sup>2</sup> University of Liverpool -->
 
 
 </div>
 
 ---
-<span class="links">
+<!-- <span class="links">
   <a  href="https://arxiv.org/abs/2411.09265" rel="nofollow"><img src="https://img.shields.io/badge/cs.CV-2411.09265-b31b1b?logo=arxiv&logoColor=red" alt="ArXiv" style="max-width: 100%;"></a>
   <a href="https://beard-leaderboard.github.io/" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Website-gray?logo=Google%20chrome&label=Project Page&labelColor=darkorange&logoColor=white" alt="GitHub" style="max-width: 100%;"></a>
   <a href="https://github.com/zhouzhengqd/BEARDt"><img alt="Github" src="https://img.shields.io/badge/Code-gray?logo=Github&label=GitHub&labelColor=black" style="max-width: 100%;"></a>
   <a href="https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Material-gray?logo=icloud&label=Dataset%20Pool&labelColor=orange"></a>
   <a href="https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Materials-gray?logo=icloud&label=Model%20Pool&labelColor=red"></a>
+</span> -->
+
+<span class="links">
+  <a  href="https://arxiv.org/" rel="nofollow"><img src="https://img.shields.io/badge/cs.CV-2411.09265-b31b1b?logo=arxiv&logoColor=red" alt="ArXiv" style="max-width: 100%;"></a>
+  <a href="https://beard-leaderboard.github.io/" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Website-gray?logo=Google%20chrome&label=Project Page&labelColor=darkorange&logoColor=white" alt="GitHub" style="max-width: 100%;"></a>
+  <a href="https://github.com/"><img alt="Github" src="https://img.shields.io/badge/Code-gray?logo=Github&label=GitHub&labelColor=black" style="max-width: 100%;"></a>
+  <a href="https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Material-gray?logo=icloud&label=Dataset%20Pool&labelColor=orange"></a>
+  <a href="https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Materials-gray?logo=icloud&label=Model%20Pool&labelColor=red"></a>
 </span>
 
-*Welcome to the official PyTorch implementation of [BEARD: Benchmarking the Adversarial Robustness for Dataset Distillation](https://arxiv.org/abs/2411.09265).*
+*Welcome to the official PyTorch implementation of [BEARD: Benchmarking the Adversarial Robustness for Dataset Distillation](https://arxiv.org/).*
 
 BEARD is an open-source benchmark specifically designed to evaluate and improve the **adversarial robustness** of Dataset Distillation (DD) methods. It provides a comprehensive assessment across three key stages: **distillation**, **training**, and **evaluation**.
 
@@ -30,12 +38,14 @@ BEARD is an open-source benchmark specifically designed to evaluate and improve 
 
 🔹 Explore  the **official leaderboard** here: **[BEARD Leaderboard](https://beard-leaderboard.github.io/)**
 
-**❗Note❗: If you encounter any issues, please feel free to contact us via email: zhengzhou@buaa.edu.cn.**
+<!-- **❗Note❗: If you encounter any issues, please feel free to contact us via email: zhengzhou@buaa.edu.cn.** -->
+
+**❗Note❗: If you encounter any issues, please feel free to contact us via email**
 
 ## 🚀 What's New?  
 
 - **Mar. 2025**: We have updated our attack library with **transfer-based** and **query-based black-box attacks** along with their evaluation files.  
-- **Sep. 2024**: The full BEARD codebase is now open-source! 🎉 Access it here: [BEARD GitHub Repository](https://github.com/zhouzhengqd/BEARD).  
+- **Sep. 2024**: The full BEARD codebase is now open-source! 🎉 Access it here: [BEARD GitHub Repository](https://github.com).  
 - **Aug. 2024**: The first full release of the BEARD benchmark project.  
 
 ## 🎯 Overview of BEARD
@@ -61,7 +71,7 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
   ```
 ### Step 2: Download Dataset and Model Pools
 - Download the required files and place them in the appropriate directories: [Data](https://share.multcloud.link/share/bbe57236-3ca2-42b2-aa10-88394c2c4b04) | [Dataset Pool](https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a) | [Model Pool](https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187).
-- ❗**Alternative Access**: If you are unable to access the **MultCloud** drive, you can find the files on **Google Drive**: [Data](https://drive.google.com/drive/folders/1ntfXLEFHRPFPC3JG_hFOkcrEh5BKSzsp?usp=drive_link) | [Dataset Pool](https://drive.google.com/drive/folders/1gtgmGEM7zZXG0al-iJQsxxhTiOD5SqLG?usp=drive_link) | [Model Pool](https://drive.google.com/drive/folders/1tFK0GTWNrFp0Vu-L_lN1WXGndiPnldZq?usp=drive_link).
+<!-- - ❗**Alternative Access**: If you are unable to access the **MultCloud** drive, you can find the files on **Google Drive**: [Data](https://drive.google.com/drive/folders/1ntfXLEFHRPFPC3JG_hFOkcrEh5BKSzsp?usp=drive_link) | [Dataset Pool](https://drive.google.com/drive/folders/1gtgmGEM7zZXG0al-iJQsxxhTiOD5SqLG?usp=drive_link) | [Model Pool](https://drive.google.com/drive/folders/1tFK0GTWNrFp0Vu-L_lN1WXGndiPnldZq?usp=drive_link). -->
 
 ### Step 3: Set Up the Conda Environment
 - Run the following command to create a conda environment
@@ -130,7 +140,7 @@ We would like to thank the contributors of the following projects that inspired 
 - [BACON](https://github.com/zhouzhengqd/BACON)
 - [torchattacks](https://github.com/Harry24k/adversarial-attacks-pytorch)
 
-## 📚 Citation
+<!-- ## 📚 Citation
 ```
 @inproceedings{zhou2025beard,
   title={BEARD: Benchmarking the Adversarial Robustness for Dataset Distillation},
@@ -142,4 +152,4 @@ We would like to thank the contributors of the following projects that inspired 
 
 ## 🌟 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=zhouzhengqd/BEARD&type=Date)](https://star-history.com/#zhouzhengqd/BEARD&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=zhouzhengqd/BEARD&type=Date)](https://star-history.com/#zhouzhengqd/BEARD&Date) -->
