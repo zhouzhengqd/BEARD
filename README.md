@@ -22,8 +22,7 @@
 
 <span class="links">
   <a  href="https://arxiv.org/" rel="nofollow"><img src="https://img.shields.io/badge/cs.CV-anonymous-b31b1b?logo=arxiv&logoColor=red" alt="ArXiv" style="max-width: 100%;"></a>
-  <a href="https://example.com" target="_blank">
-  <img alt="Conference Paper" src="https://img.shields.io/badge/Paper-gray?logo=libreoffice&label=Coming Soon&labelColor=367DBD" /></a>
+  <a href="https://example.com" el="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Paper-gray?logo=libreoffice&label=Coming Soon&labelColor=367DBD" /></a>
   <a href="https://beard-leaderboard.github.io/" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Website-gray?logo=google%20chrome&label=Project%20Page&labelColor=darkorange&logoColor=white" style="max-width: 100%;"></a>
   <a href="https://github.com/"><img alt="Github" src="https://img.shields.io/badge/Code-gray?logo=Github&label=GitHub&labelColor=black" style="max-width: 100%;"></a>
   <a href="https://share.multcloud.link/share/a51b64d1-063c-4a5c-a7b2-667cf94da71a" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Material-gray?logo=icloud&label=Dataset%20Pool&labelColor=orange"></a>
