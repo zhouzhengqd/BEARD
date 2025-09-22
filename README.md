@@ -29,15 +29,15 @@
   <a href="https://share.multcloud.link/share/7dd850f1-b263-4f8b-9777-8e3134250187" rel="nofollow"><img alt="Static Badge" src="https://img.shields.io/badge/Materials-gray?logo=icloud&label=Model%20Pool&labelColor=red"></a>
 </span>
 
-*Welcome to the official PyTorch implementation of [BEARD: Benchmarking the Adversarial Robustness for Dataset Distillation](https://arxiv.org/).*
+*Welcome to the official PyTorch implementation of [<span style="font-family: monospace;">BEARD</span>: Benchmarking the Adversarial Robustness for Dataset Distillation](https://arxiv.org/).*
 
-BEARD is an open-source benchmark specifically designed to evaluate and improve the **adversarial robustness** of Dataset Distillation (DD) methods. It provides a comprehensive assessment across three key stages: **distillation**, **training**, and **evaluation**.
+<span style="font-family: monospace;">BEARD</span> is an open-source benchmark specifically designed to evaluate and improve the **adversarial robustness** of Dataset Distillation (DD) methods. It provides a comprehensive assessment across three key stages: **distillation**, **training**, and **evaluation**.
 
 <p align="center">
 <img src="Fig/intro.png" width="100%" class="center" alt="pipeline"/>
 </p>
 
-🔹 Explore  the **official leaderboard** here: **[BEARD Leaderboard](https://beard-leaderboard.github.io/)**
+🔹 Explore  the **official leaderboard** here: **[<span style="font-family: monospace;">BEARD</span> Leaderboard](https://beard-leaderboard.github.io/)**
 
 <!-- **❗Note❗: If you encounter any issues, please feel free to contact us via email: zhengzhou@buaa.edu.cn.** -->
 
@@ -46,24 +46,25 @@ BEARD is an open-source benchmark specifically designed to evaluate and improve 
 ## 🚀 What's New?  
 
 - **Mar. 2025**: We have updated our attack library with **transfer-based** and **query-based black-box attacks** along with their evaluation files.  
-- **Sep. 2024**: The full BEARD codebase is now open-source! 🎉 Access it here: [BEARD GitHub Repository](https://github.com).  
-- **Aug. 2024**: The first full release of the BEARD benchmark project.  
+- **Sep. 2024**: The full <span style="font-family: monospace;">BEARD</span> codebase is now open-source! 🎉 Access it here: [<span style="font-family: monospace;">BEARD</span> GitHub Repository](https://github.com).  
+- **Aug. 2024**: The first full release of the <span style="font-family: monospace;">BEARD</span> benchmark project.  
+- **[Upcoming] RR, CREI, I-RR, and I-CREI metrics**: Execution scripts for these metrics are currently under development and will be made publicly available in a future update.
 
-## 🎯 Overview of BEARD
+## 🎯 Overview of <span style="font-family: monospace;">BEARD</span>
 
 <p align="center">
 <img src="Fig/overview.png" width="100%" class="center" alt="pipeline"/>
 </p>
 
-BEARD addresses a critical gap in **dataset distillation** research by providing a systematic framework for evaluating adversarial robustness. While significant progress has been made in DD, deep learning models trained on distilled datasets remain vulnerable to adversarial attacks, posing risks in real-world applications.
+<span style="font-family: monospace;">BEARD</span> addresses a critical gap in **dataset distillation** research by providing a systematic framework for evaluating adversarial robustness. While significant progress has been made in DD, deep learning models trained on distilled datasets remain vulnerable to adversarial attacks, posing risks in real-world applications.
 
 ### 🔥 Key Features:
 - **Unified Benchmark**: Evaluate DD methods across multiple datasets and attack scenarios.
 - **New Evaluation Metrics**: Includes the **Robustness Ratio (RR)**, **Attack Efficiency Ratio (AE)**, and **Comprehensive Robustness-Efficiency Index (CREI)**.
-- **Open-Source Tools**: Easily integrate and evaluate the robustness of your DD methods with BEARD's extensible framework.
+- **Open-Source Tools**: Easily integrate and evaluate the robustness of your DD methods with <span style="font-family: monospace;">BEARD</span>'s extensible framework.
 
 ## 🛠 Getting Started
-Follow the steps below to set up the environment and run the BEARD benchmark.
+Follow the steps below to set up the environment and run the <span style="font-family: monospace;">BEARD</span> benchmark.
 
 ### Step 1: Clone the Repository
 - Run the following command to download the Repo.
@@ -83,7 +84,7 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
     conda activate beard
     ```
 ## 📁 Directory Structure
-- `BACON`
+- `BEARD`
     - `Code`
         - `data`
           - `datasets`
@@ -95,7 +96,7 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
         - `evaluate_config.json`
         - `train_config.json`
         - `evaluate_config_blackbox.json`
-        - Files for BEARD
+        - Files for <span style="font-family: monospace;">BEARD</span>
         - `enviroment.yml`
         - ...
         - ...
@@ -129,7 +130,7 @@ Follow the steps below to set up the environment and run the BEARD benchmark.
 - Once the models are trained, follow the evaluation steps outlined in the "Quick Evaluation Command" section to evaluate adversarial robustness.
 
 ## 🌐 Join the Community
-If you're working on DD or adversarial robustness, we invite you to contribute to the BEARD benchmark, explore the leaderboard, and share your insights.
+If you're working on DD or adversarial robustness, we invite you to contribute to the <span style="font-family: monospace;">BEARD</span> benchmark, explore the leaderboard, and share your insights.
 
 ## 🙏 Acknowledgments
 
