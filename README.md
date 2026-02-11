@@ -6,7 +6,7 @@
 
 <!-- [Zheng Zhou](https://zhouzhengqd.github.io/)<sup>1</sup> &nbsp; [Wenquan Feng](https://shi.buaa.edu.cn/fengwenquan/zh_CN/index/132879/list/)<sup>1</sup> &nbsp; [Shuchang Lyu](https://scholar.google.com/citations?user=SwGcxzMAAAAJ&hl=en)<sup>1</sup> &nbsp; [Guangliang Cheng](https://sites.google.com/view/guangliangcheng)<sup>2</sup> &nbsp; [Xiaowei Huang](https://cgi.csc.liv.ac.uk/~xiaowei/)<sup>2</sup> &nbsp; [Qi Zhao](https://shi.buaa.edu.cn/07297/zh_CN/index.htm)<sup>1</sup>
 
-<sup>1</sup> Beihang Univerisity &nbsp; <sup>2</sup> University of Liverpool -->
+<sup>1</sup> Beihang University &nbsp; <sup>2</sup> University of Liverpool -->
 
 
 </div>
@@ -45,10 +45,10 @@
 
 ## 🚀 What's New?  
 
+- **Feb. 2026**: Released an automated metric computation toolkit for RR, AE, and CREI under `Code/metrics/`. See [`Code/metrics/README.md`](Code/metrics/README.md) for detailed instructions.
 - **Mar. 2025**: We have updated our attack library with **transfer-based** and **query-based black-box attacks** along with their evaluation files.  
 - **Sep. 2024**: The full <span style="font-family: monospace;">BEARD</span> codebase is now open-source! 🎉 Access it here: [<span style="font-family: monospace;">BEARD</span> GitHub Repository](https://github.com).  
 - **Aug. 2024**: The first full release of the <span style="font-family: monospace;">BEARD</span> benchmark project.  
-- **[Upcoming] RR, CREI, I-RR, and I-CREI metrics**: Execution scripts for these metrics are currently under development and will be made publicly available in a future update.
 
 ## 🎯 Overview of <span style="font-family: monospace;">BEARD</span>
 
@@ -90,6 +90,7 @@ Follow the steps below to set up the environment and run the <span style="font-f
           - `datasets`
         - `dataset_pool`
         - `model_pool`
+        - `metrics`
         - `evaluate_model.py`
         - `train_model.py`
         - `evaluate_model_blackbox.py`
@@ -97,7 +98,7 @@ Follow the steps below to set up the environment and run the <span style="font-f
         - `train_config.json`
         - `evaluate_config_blackbox.json`
         - Files for <span style="font-family: monospace;">BEARD</span>
-        - `enviroment.yml`
+        - `environment.yml`
         - ...
         - ...
         - ...
@@ -113,9 +114,16 @@ Follow the steps below to set up the environment and run the <span style="font-f
   ```
 - To evaluate **transfer-based black-box attacks**, use:
   ```
-    python evaluate_config_blackbox.py --config ./evaluate_config_blackbox.json
+    python evaluate_model_blackbox.py --config ./evaluate_config_blackbox.json
   ```
 - **Note:** If your model was trained using **distributed training**, ensure that you also use the corresponding **distributed evaluation** setup for consistency. For instance, **IDM** in the model pool is trained with distributed training, so we provide a **single-GPU version** in the model pool for evaluation.
+## 📊 Robustness Metrics Toolkit
+
+We provide an automated metrics toolkit under `Code/metrics/` for robustness evaluation in dataset distillation. It computes **RR (Robustness Ratio)**, **AE (Attack Efficiency)**, and **CREI** across **white-box**, **black-box query**, and **black-box transfer** attack settings, and exports results in **JSON** and **XLSX/CSV** formats.
+
+**📌 Quick Link:** See detailed usage in **[`Code/metrics/README.md`](Code/metrics/README.md)**.
+
+**⚠️ Note:** For **transfer-based black-box** logs, run `convert_to_white_box.py` first, then evaluate with `evaluate_metrics.py` (see the toolkit README for commands).
 ## ➕ Adding New Datasets and Models
 ### Step 1: Add Datasets
 - Place the newly generated distilled datasets in the `dataset_pool` directory.

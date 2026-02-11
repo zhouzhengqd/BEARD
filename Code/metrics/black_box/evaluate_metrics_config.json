@@ -1,0 +1,28 @@
+{
+    "input_files": [
+        "./Query/BACON/ConvNet_CIFAR10_50_evaluation_log.txt",
+        "./Query/BACON/ConvNet_CIFAR10_50_evaluation_log.txt",
+        "./Query/BACON/ConvNet_CIFAR10_50_evaluation_log.txt"
+    ],
+    "output_dir": "./Query/BACON/",
+    "metrics_type": "beard",
+    "alpha": 0.5,
+    "dataset": "CIFAR10",
+    "method": "BACON",
+    "output_files": {
+        "json_template": "data_{ipc_name}.json",
+        "metrics_file": "{method}_metrics_{metrics_type}.json",
+        "summary_file": "{method}_{dataset}_Results_Summary.md"
+    },
+    "attack_filtering": {
+        "excluded_targeted_attacks": [
+            "Deepfool",
+            "AA"
+        ],
+        "include_all_untargeted": true
+    },
+    "logging": {
+        "verbose": true,
+        "show_progress": true
+    }
+}
